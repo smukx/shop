@@ -1,0 +1,160 @@
+/* Base styles for all devices */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-overlay h3 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+}
+
+.content {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.content section {
+    flex: 1;
+}
+
+.card {
+    background-color: #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.button {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.intro {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile specific styles */
+@media only screen and (max-width: 768px) {
+    /* Adjust layout for mobile */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .banner {
+        height: 200px; /* Reduce banner height for smaller screens */
+    }
+
+    /* Side button for context menu on mobile */
+    .mobile-context-menu {
+        position: fixed;
+        bottom: 20px;
+        right: 20px; /* Adjust based on preference */
+        z-index: 1000;
+    }
+
+    .mobile-context-menu button {
+        background-color: #fff;
+        color: #000;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    /* Show context menu when button is clicked */
+    .context-menu {
+        display: none;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        background: #333;
+        border-radius: 8px;
+        padding: 10px;
+        list-style: none;
+    }
+
+    .context-menu.active {
+        display: block;
+    }
+
+    .context-menu li {
+        margin-bottom: 10px;
+    }
+
+    .context-menu a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
