@@ -145,13 +145,21 @@ nav ul li a:hover {
     margin-top: 0;
 }
 
-footer {
+/* footer {
     text-align: center;
     background-color: black;
     color: #fff;
     padding: 20px;
+} */
+
+footer {
+    background-color: black;
+    color: #fff;
+    text-align: center; /* Center-align the footer content */
+    padding: 10px; 
+    margin-top: auto; /* Pushes footer to the bottom */
 }
-  
+
 
 footer p {
     font-size: 12px;
