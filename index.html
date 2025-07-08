@@ -91,6 +91,15 @@
         .social-link img {
             vertical-align: middle;
         }
+        /* Audio styling (hidden controls) */
+        audio {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0; /* Hide controls visually */
+            z-index: -1;
+        }
     </style>
 </head>
 <body>
@@ -106,7 +115,7 @@
                     <div class="countdown" id="countdown">
                         <div class="countdown-item"><span id="days">89</span><span>days</span></div>
                         <div class="countdown-item"><span id="hours">23</span><span>hours</span></div>
-                        <div class="countdown-item"><span id="minutes">46</span><span>minutes</span></div>
+                        <div class="countdown-item"><span id="minutes">31</span><span>minutes</span></div>
                         <div class="countdown-item"><span id="seconds">00</span><span>seconds</span></div>
                     </div>
                 </div>
@@ -118,6 +127,12 @@
             <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/twitterx--v2.png" alt="twitterx--v2">
         </a>
     </div>
+    <!-- Background Music -->
+    <audio autoplay loop>
+      <source src="music.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
 
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
